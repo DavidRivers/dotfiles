@@ -4,7 +4,8 @@ cd ~
 git clone https://github.com/DavidRivers/dotfiles
 
 mkdir --parents .config/fish
-ln --symbolic dotfiles/vimrc .vimrc
-ln --symbolic dotfiles/config.fish ~/.config/fish/
+ln --symbolic ~/dotfiles/.vimrc .vimrc
+ln --symbolic ~/dotfiles/config.fish ~/.config/fish/
+ln --symbolic ~/dotfiles/aliases.fish ~/.config/fish/aliases.fish
 
 cd ~
