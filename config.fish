@@ -1,6 +1,15 @@
 status --is-interactive; and . ~/.config/fish/aliases.fish
 
-set fish_key_bindings fish_vi_key_bindings
+#set fish_key_bindings fish_vi_key_bindings
+
+set --export PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
+set --export EDITOR 'vim'
+
+if [ (uname) = Darwin ]
+  set --export MANPATH /usr/local/opt/coreutils/libexec/gnuman (manpath)
+  set --export MANPATH /usr/local/share/man (manpath)
+  set --export MANPATH /usr/local/opt/erlang/lib/erlang/man (manpath)
+end
 
 if test -e ~/dotfiles/git-custom-commands
   set --export PATH ~/dotfiles/git-custom-commands $PATH
@@ -135,3 +144,36 @@ if test -e ~/.rvm
 
   __handle_rvmrc_stuff
 end
+
+# Rake completion helper
+# TODO - This shouldn't be is complicated.
+function test_for_rake
+  begin
+    [ -f Rakefile ]
+    or [ -f rakefile ]
+    or [ -f Rakefile.rb ]
+    or [ -f rakefile.rb ]
+  end
+end
+
+# TODO - fix-me-up
+function __rake_checksum
+  md5sum Rakefile | sed --regexp-extended 's/^\b(.+)\b +Rakefile$/\1/'
+end
+
+# Rake completion helper
+function rake_args
+  set task_full  /tmp/Rakefile.tasks.full.(__rake_checksum)
+  if not [ -f $task_full ]
+    if [ -f Gemfile ]
+      set rake_prefix 'bundle exec'
+    end
+
+    eval $rake_prefix rake -T \
+    | sed --regexp-extended   's/^rake (((\w|\[|\]|-|\,)+)(\:(\w|\[|\]|-|\,)+)*) +# (.+)$/\1\t\6/' \
+    > $task_full
+  end
+  cat $task_full
+end
+
+complete --command rake --condition 'test_for_rake' --arguments '(rake_args)' --no-files
