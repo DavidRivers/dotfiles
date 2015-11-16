@@ -1,7 +1,20 @@
-status --is-interactive; and . ~/.config/fish/aliases.fish
+function __fish_skip_config --argument-names command
+  env __FISH_SKIP_CONFIG__=t fish --command "$command"
+end
+
+if set --query __FISH_SKIP_CONFIG__
+  exit
+end
+
+if status --is-interactive
+  source ~/dotfiles/__fish_complete_cd.fish
+  source ~/dotfiles/z.fish
+  source ~/.config/fish/aliases.fish
+end
 
 #set fish_key_bindings fish_vi_key_bindings
 
+set --export PATH /usr/local/sbin $PATH
 set --export PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
 set --export EDITOR 'vim'
 

@@ -1,5 +1,9 @@
 set -u aliases ~/.config/fish/aliases.fish
 
+function firefox \
+  open -a Firefox
+end
+
 function ea \
 	--description "edit and reload aliases"
 	vim $aliases

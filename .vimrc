@@ -4,6 +4,8 @@ endif
 
 set clipboard=unnamed " Only for Mac?: https://robots.thoughtbot.com/how-to-copy-and-paste-with-tmux-on-mac-os-x
 
+runtime macros/matchit.vim " Required for vim-textobj-rubyblock
+
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -49,6 +51,7 @@ map <Leader>d :bdelete<CR>
 map <Leader>q :q<CR>
 map <Leader>/ :normal gcc<CR>
 map <Leader>P :set paste!<CR>
+map <Leader>g :!ag "
 " open buffer in splits
 "map <Leader>v 
 "map <Leader>j
@@ -77,7 +80,7 @@ set wildignore+=*/node_modules/*,*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\node_modules\\*,*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 " Fugitive "
-nnoremap <Leader>g :Ggrep '
+"nnoremap <Leader>g :Ggrep '
 nnoremap <Leader>gg :Gstatus<CR>
 nnoremap <Leader>gd :Gvdiff<CR>
 nnoremap <Leader>gh :Gbrowse<CR>
