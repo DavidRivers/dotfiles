@@ -1,4 +1,6 @@
-## Mac dependencies
-* homebrew/cask
-* rvm/rbenv
-* gnu utils found here: https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
+## Installation
+### Ubuntu
+`bash -c git clone git@github.com:davidrivers/dotfiles.git ~/Dev/dotfiles;chmod +x ~/Dev/dotfiles/install/ubuntu.sh;~/Dev/dotfiles/install/ubuntu.sh`
+
+### Mac
+`bash -c git clone git@github.com:davidrivers/dotfiles.git ~/Dev/dotfiles;chmod +x ~/Dev/dotfiles/install/mac.sh;~/Dev/dotfiles/install/mac.sh`
