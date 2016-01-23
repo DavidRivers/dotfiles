@@ -1,4 +1,4 @@
-## Installation
+## Installation/Updating
 ### Ubuntu
 `bash -c "git clone git@github.com:davidrivers/dotfiles.git ~/Dev/dotfiles;chmod +x ~/Dev/dotfiles/install/ubuntu.sh;~/Dev/dotfiles/install/ubuntu.sh"`
 

@@ -28,6 +28,10 @@ if test -e ~/dotfiles/git-custom-commands
   set --export PATH ~/dotfiles/git-custom-commands $PATH
 end
 
+if test -e ~/bin
+  set --export PATH ~/bin/* $PATH
+end
+
 if test -e ~/.rvm
   function rvm --description='Ruby enVironment Manager'
     # run RVM and capture the resulting environment
