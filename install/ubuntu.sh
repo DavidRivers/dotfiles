@@ -13,6 +13,9 @@ ln --symbolic ~/Dev/dotfiles/.vimrc ~/.vimrc
 # Install vim dependencies
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/
-git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle/ && \
+git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
+git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive && \
   vim -u NONE -c "helptags vim-fugitive/doc" -c q
+
+# Set fish as default shell
+chsh -s /usr/bin/fish

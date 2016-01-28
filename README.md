@@ -7,3 +7,4 @@
 
 ## TODO
 [Unset Ubuntu Terminal profile setting of "Use colors for system theme"](https://askubuntu.com/questions/628122/how-can-i-set-the-background-color-of-gnome-terminal-using-gconftool-2)
+Script the customization of Ubuntu settings (edit keys, auto-hide Dock, themes, etc.), similarly using dconf or gconftool-2
