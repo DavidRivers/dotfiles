@@ -22,7 +22,7 @@ open -b 'com.apple Terminal' "https://raw.githubusercontent.com/tomislav/osx-ter
 ## pull dotfiles
 
 mkdir -p ~/Dev
-git clone https://github.com/DavidRivers/dotfiles ~/Dev/dotfiles
+git clone git@github.com:DavidRivers/dotfiles ~/Dev/dotfiles
 ln -s ~/Dev/dotfiles/.vimrc ~/.vimrc
 mkdir -p ~/.config/fish/
 ln -s ~/Dev/dotfiles/config.fish ~/.config/fish/
