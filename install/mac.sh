@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # https://github.com/scooter-dangle/dotfiles/blob/master/build_env.sh
+# possible test for osx (if merging with other *nix scripts): if-shell 'test "$(uname)" = "Darwin"' 'source ~/.tmux-osx.conf'
+# if-shell 'which >/dev/null 2>&1 reattach-to-user-namespace' 'source ~/.tmux-osx.conf'
 
 ## Need to automate association of GitHub SSH identity
 # 1: check if there is an ssh identity
@@ -11,7 +13,7 @@
 
 ## userland utils
 
-brew install coreutils fish tmux git vim
+brew install coreutils fish tmux reattach-to-user-namespace git vim
 brew cask install flux divvy firefox google-chrome vlc
 
 ## Terminal.app configs
@@ -27,6 +29,7 @@ ln -s ~/Dev/dotfiles/.vimrc ~/.vimrc
 mkdir -p ~/.config/fish/
 ln -s ~/Dev/dotfiles/config.fish ~/.config/fish/
 ln -s ~/Dev/dotfiles/aliases.fish ~/.config/fish/aliases.fish
+ln -s ~/Dev/dotfiles/.tmux.conf ~/.tmux.conf
 
 ## fish configs
 
