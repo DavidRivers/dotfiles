@@ -1,5 +1,9 @@
 set -u aliases ~/.config/fish/aliases.fish
 
+function nvm
+  bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end
+
 function firefox \
   open -a Firefox
 end

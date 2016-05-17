@@ -27,11 +27,11 @@ open -b 'com.apple Terminal' "https://raw.githubusercontent.com/tomislav/osx-ter
 
 mkdir -p ~/Dev
 git clone git@github.com:DavidRivers/dotfiles ~/Dev/dotfiles
-ln -s ~/Dev/dotfiles/.vimrc ~/.vimrc
+ln --symbolic --force ~/Dev/dotfiles/.vimrc ~/.vimrc
 mkdir -p ~/.config/fish/
-ln -s ~/Dev/dotfiles/config.fish ~/.config/fish/
-ln -s ~/Dev/dotfiles/aliases.fish ~/.config/fish/aliases.fish
-ln -s ~/Dev/dotfiles/.tmux.conf ~/.tmux.conf
+ln --symbolic --force ~/Dev/dotfiles/config.fish ~/.config/fish/config.fish
+ln --symbolic --force ~/Dev/dotfiles/aliases.fish ~/.config/fish/aliases.fish
+ln --symbolic --force ~/Dev/dotfiles/.tmux.conf ~/.tmux.conf
 
 ## fish configs
 
@@ -40,10 +40,10 @@ curl https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/t
 
 ## vim config
 
-git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive && vim -u NONE -c "helptags vim-fugitive/doc" -c q
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
+#git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive && vim -u NONE -c "helptags vim-fugitive/doc" -c q
+#mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+#  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+#git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
 
 
 ## launch windows (start workflow)
