@@ -8,3 +8,8 @@
 ## TODO
 * [Unset Ubuntu Terminal profile setting of "Use colors for system theme"](https://askubuntu.com/questions/628122/how-can-i-set-the-background-color-of-gnome-terminal-using-gconftool-2)
 * Script the customization of Ubuntu settings (edit keys, auto-hide Dock, Dash Serach settings, themes, etc.), similarly using dconf or gconftool-2
+* Keep track of all executables installed (in order to provide an uninstallation process)?:
+  ** github make file (in ~/bin): bass
+  ** curl one-liner: nvm, pathogen
+  ** brew/brew-cask installed apps
+  ** apps installed from installer wizard files

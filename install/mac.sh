@@ -15,6 +15,8 @@
 
 brew install coreutils fish tmux reattach-to-user-namespace git vim
 brew cask install flux divvy firefox google-chrome vlc
+# add brews for other dev stacks (rvm, nvm, python/virtualenv?, browserify, etc.)
+# maybe create manifest files that specify the dev stacks that a project requirest?
 
 ## Terminal.app configs
 
