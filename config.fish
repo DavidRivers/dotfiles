@@ -1,3 +1,5 @@
+fish_vi_mode
+
 function __fish_skip_config --argument-names command
   env __FISH_SKIP_CONFIG__=t fish --command "$command"
 end
