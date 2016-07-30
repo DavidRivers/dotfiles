@@ -4,6 +4,14 @@ function nvm
   bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
 end
 
+function acs
+  apt-cache search $argv
+end
+
+function agi
+  sudo apt-get install $argv
+end
+
 function firefox \
   open -a Firefox
 end
