@@ -41,12 +41,12 @@ set wildignorecase
 
 let mapleader=" "
 "map <Leader>r :CommandTFlush<CR>
-map <Leader>r :CtrlPClearCache<CR>
-map <Leader>gg :NERDTreeToggle<CR>
-map <Leader>f :NERDTreeToggle<CR>
+"map <Leader>r :CtrlPClearCache<CR>
+"map <Leader>gg :NERDTreeToggle<CR>
+"map <Leader>f :NERDTreeToggle<CR>
 map <Leader>b :buffer 
-map <Leader>a :TagbarToggle<CR>
-map <Leader>p :CtrlP<CR>
+"map <Leader>a :TagbarToggle<CR>
+"map <Leader>p :CtrlP<CR>
 map <Leader>d :bdelete<CR>
 map <Leader>q :q<CR>
 map <Leader>/ :normal gcc<CR>
@@ -56,7 +56,7 @@ map <Leader>g :!ag "
 "map <Leader>v 
 "map <Leader>j
 "nmap <Leader>f :!touch 
-nmap <Leader>s :w<CR>
+map <Leader>s :w<CR>
 "imap <Leader>s <C-o>:w<CR> " causes an annoying delay after typing space in
 "insert mode
 
